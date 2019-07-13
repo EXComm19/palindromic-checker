@@ -10,17 +10,17 @@ window.onload = function () {
 }
 
 function checkPalindrome(word) {
+    document.getElementById('o-label').textContent = word + " is :"
+
     const lower = word.toLowerCase()
     const arr = lower.split("")
     const revarr = arr.reverse()
     const reverse = revarr.join("")
 
     if (reverse == lower) {
-        console.log('Palindrome');
+        document.getElementById('output').textContent = "a Palindrome"
     } else {
-        console.log('not Palindrome');
-        console.log(reverse);
-        
+        document.getElementById('output').textContent = "Not a Palindrome"
     }
 }
 
